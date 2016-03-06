@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Image List</title>
+
+	<script src="js/visibleController.js"></script>
+	<script src = "//thronqa-cdn.thron.com/shared/plugins/tracking/current/tracking-library-min.js"></script>
+	<style>
+		.wall{
+			text-align: center;
+			width: 100%;
+		}
+	</style>
+</head>
+<body>
+<div class="wall">
+	<img src="https://hub-cdn.thron.com/static/THRON_SitoSupport_big-1920x0-1920x0_LJQCYN.jpg" style="opacity: 0.2; width: 522px; height: 348px;">
+	<img src="https://hub-cdn.thron.com/static/THRON_SitoSupport_big-1920x0-1920x0_LJQCYN.jpg" style="opacity: 0.2; width: 522px; height: 348px;">
+	<img src="https://hub-cdn.thron.com/static/THRON_SitoSupport_big-1920x0-1920x0_LJQCYN.jpg" style="opacity: 0.2; width: 522px; height: 348px;">
+	<img src="https://hub-cdn.thron.com/static/THRON_SitoSupport_big-1920x0-1920x0_LJQCYN.jpg" style="opacity: 0.2; width: 522px; height: 348px;">
+	<img src="https://hub-cdn.thron.com/static/THRON_SitoSupport_big-1920x0-1920x0_LJQCYN.jpg" style="opacity: 0.2; width: 522px; height: 348px;">
+	<img src="https://hub-cdn.thron.com/static/THRON_SitoSupport_big-1920x0-1920x0_LJQCYN.jpg" style="opacity: 0.2; width: 522px; height: 348px;">
+	<img src="https://hub-cdn.thron.com/static/THRON_SitoSupport_big-1920x0-1920x0_LJQCYN.jpg" style="opacity: 0.2; width: 522px; height: 348px;">
+	<img src="https://hub-cdn.thron.com/static/THRON_SitoSupport_big-1920x0-1920x0_LJQCYN.jpg" style="opacity: 0.2; width: 522px; height: 348px;">
+	<img src="https://hub-cdn.thron.com/static/THRON_SitoSupport_big-1920x0-1920x0_LJQCYN.jpg" style="opacity: 0.2; width: 522px; height: 348px;">
+	<img src="https://hub-cdn.thron.com/static/THRON_SitoSupport_big-1920x0-1920x0_LJQCYN.jpg" style="opacity: 0.2; width: 522px; height: 348px;">
+	<img src="https://hub-cdn.thron.com/static/THRON_SitoSupport_big-1920x0-1920x0_LJQCYN.jpg" style="opacity: 0.2; width: 522px; height: 348px;">
+	<img src="https://hub-cdn.thron.com/static/THRON_SitoSupport_big-1920x0-1920x0_LJQCYN.jpg" style="opacity: 0.2; width: 522px; height: 348px;">
+</div>
+
+
+<script>
+	//When element is visible call this function
+	var onVisible = function(domElement, xcontentId){
+		domElement.style.opacity = 1;
+		var params = {
+			clientId: "hub",
+			xcontentId: xcontentId,
+			contentType: "IMAGE"
+		};
+		var tracker = _ta.initContentTracker(params);
+		tracker.loadEvent();
+	};
+
+	//Find All Images
+	var imgs = document.getElementsByTagName("img");
+	for(var i = 0; i < imgs.length; i++){
+		new VisibleController(imgs[i], "c7d17045-b7ef-43a1-904d-a6819c178ffa", 3, onVisible);
+	}
+</script>
+</body>
+</html>
