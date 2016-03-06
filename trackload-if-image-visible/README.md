@@ -1,18 +1,18 @@
 Send a track load event if the image remains visible on the screen
 ==============
-In these examples, if the image remains more than a specific seconds visible into display,
+In these examples, if the image remains visible into display for some specific seconds,
 the tracking load event will be sent.
 
-To create these examples, we have implemented a small javascript, **js/visibleController.js** which can be embedded inside your pages.
+To create these examples, we have implemented a small javascript, **js/visibleController.js** which can be easily embedded inside your web pages.
 
-The purpose of this library is very simple, given as input:
+The library creates a global function called **VisibleController**. It receives as input params:
 
-- image
-- xcontentId
-- seconds
-- callback
+- image, an HTMLImageElement
+- xcontentId, a Thron content Id
+- seconds, a number 
+- callback, a function
 
-Library will  call the *callback* function only if the *image* will be loaded and will be visible on the screen for more than *seconds* seconds.
+VisibleController will call the *callback* function only if the *image* will be loaded and will be visible on the screen for more than *seconds* seconds.
 
 
 
@@ -40,7 +40,7 @@ Library will  call the *callback* function only if the *image* will be loaded an
 To see in action **js/visibleController.js** with [THRON tracking library](https://support.thron.com/hc/en-us/articles/203817252-How-to-integrate-tracking-library) 
 try our examples:
 
-- **wall.html*** Show a list of images. 
+- **wall.html** Show a list of images. 
 For each image will be sent the tracking only if it remains visible for at least three seconds.
 - **single-image.html** Show a single image and track if remains visible for at least three seconds
 - **text-image** As the example above, but was added in the text before the image
