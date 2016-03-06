@@ -12,7 +12,7 @@ The purpose of this library is very simple, given as input:
 - seconds
 - callback
 
-Library will  call the <callback> function only if the <image> will be loaded and will be visible on the screen for more than <seconds> seconds.
+Library will  call the *callback* function only if the *image* will be loaded and will be visible on the screen for more than *seconds* seconds.
 
 
 
@@ -40,10 +40,10 @@ Library will  call the <callback> function only if the <image> will be loaded an
 To see in action **js/visibleController.js** with [THRON tracking library](https://support.thron.com/hc/en-us/articles/203817252-How-to-integrate-tracking-library) 
 try our examples:
 
-- *wall.html* Show a list of images. 
+- **wall.html*** Show a list of images. 
 For each image will be sent the tracking only if it remains visible for at least three seconds.
-- *single-image.html* Show a single image and track if remains visible for at least three seconds
-- *text-image* As the example above, but was added in the text before the image
+- **single-image.html** Show a single image and track if remains visible for at least three seconds
+- **text-image** As the example above, but was added in the text before the image
 
 ###DEMO
 
