@@ -161,7 +161,7 @@ var scrollHandler = (function () {
 
 	window.docReady(
 		function () {
-			document.getElementsByTagName("body")[0].onscroll = onScrollBody;
+			window.onscroll = onScrollBody;
 		}
 	);
 })();
