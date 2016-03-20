@@ -1,19 +1,24 @@
-Send a track load event if the image remains visible on the screen
+Track image visit only when it has been visible on the screen for some time
 ==============
-In these examples, if the image remains visible into display for some specific seconds,
-the tracking load event will be sent.
+Images , from an intelligence tracking perspective, are an interesting content type: there is no explicit action that identifies when an user “watches” an image and there is usually no real difference between an image (source) and a thumbnail (usually a resize/crop of the same image). 
 
-To create these examples, we have implemented a small javascript, **js/visibleController.js** which can be easily embedded inside your web pages.
 
+When you are embeedding Image content with no explicit view-action: you can assume that user “watches” image when the image has been visible on screen for more than 3 seconds. 
+
+
+In the following examples, if the image remains visible on display for a defined amount of seconds, the "load" event is fired to track content view.
+
+
+To create these examples, we developed  **js/visibleController.js** library which can be embedded in your web pages. 
 The library creates a global function called **VisibleController**. It receives as input params:
 
 - image, an HTMLImageElement
-- xcontentId, a Thron content Id
-- seconds, a number 
-- callback, a function
+- xcontentId, a Thron content Identifier
+- seconds, time threshold to use for tracking
+- callback, a function to be called after threshold has been reached
 
-VisibleController will call the *callback* function only if the *image* will be loaded and will be visible on the screen for more than *seconds* seconds.
-
+VisibleController will call the *callback* function only if the *image* will be loaded and will be visible on the screen for more than *seconds* seconds. 
+You can simply connect your tracking code as callback function to trigger execution only after few seconds of image being visible on screen.
 
 
 **Example**
