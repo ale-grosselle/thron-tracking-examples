@@ -182,7 +182,7 @@ window.VisibleController = function (domElement, contentId, timeout, callback) {
 	this.timeoutId = -1;
 	this.contentId = contentId;
 	//Is Image?
-	if(this.domElement instanceof HTMLImageElement){
+	if(this.domElement instanceof HTMLImageElement && !this.domElement.complete){
 		this.domElement.onload = this.onImageLoaded.bind(this);
 	}else{
 		this.registerElement();
